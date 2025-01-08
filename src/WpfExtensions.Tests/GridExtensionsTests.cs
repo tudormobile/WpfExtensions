@@ -92,4 +92,24 @@ public class GridExtensionsTests
         var actual = Grid.GetColumn(target);
         Assert.AreEqual(expected, actual);
     }
+
+    [TestMethod]
+    public void ColumnSpanTest()
+    {
+        var expected = 2;
+        var target = new UIElement();
+        Assert.AreSame(target, target.ColumnSpan(expected));
+        var actual = Grid.GetColumnSpan(target);
+        Assert.AreEqual(expected, actual);
+    }
+
+    [TestMethod]
+    public void RowSpanTest()
+    {
+        var expected = 5;
+        var target = new UIElement();
+        Assert.AreSame(target, target.RowSpan(expected));
+        var actual = Grid.GetRowSpan(target);
+        Assert.AreEqual(expected, actual);
+    }
 }

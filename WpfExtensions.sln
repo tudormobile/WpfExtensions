@@ -7,11 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExtensions", "src\WpfExt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExtensions.Tests", "src\WpfExtensions.Tests\WpfExtensions.Tests.csproj", "{FD25161D-0A78-4634-AC29-059EF473AF15}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BCBDC738-1E0A-4FC4-84B4-D1168B668BBB}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-		version.txt = version.txt
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{3CC6F494-9EA4-46BB-B823-CD8A130E1B49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "samples\WpfApp1\WpfApp1.csproj", "{5823879A-D8DE-4EA4-BF44-E7EB0E05D639}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +25,15 @@ Global
 		{FD25161D-0A78-4634-AC29-059EF473AF15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD25161D-0A78-4634-AC29-059EF473AF15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD25161D-0A78-4634-AC29-059EF473AF15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5823879A-D8DE-4EA4-BF44-E7EB0E05D639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5823879A-D8DE-4EA4-BF44-E7EB0E05D639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5823879A-D8DE-4EA4-BF44-E7EB0E05D639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5823879A-D8DE-4EA4-BF44-E7EB0E05D639}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5823879A-D8DE-4EA4-BF44-E7EB0E05D639} = {3CC6F494-9EA4-46BB-B823-CD8A130E1B49}
 	EndGlobalSection
 EndGlobal

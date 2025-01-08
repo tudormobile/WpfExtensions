@@ -9,6 +9,7 @@ namespace Tudormobile.WpfExtensions;
 public static class GridExtensions
 {
     private static GridLengthConverter _converter = new GridLengthConverter();
+
     /// <summary>
     /// Add Row definitions.
     /// </summary>
@@ -98,6 +99,24 @@ public static class GridExtensions
     /// <param name="column">Column index to set.</param>
     /// <returns>Fluent-reference to self.</returns>
     public static T Column<T>(this T element, int column) where T : UIElement { Grid.SetColumn(element, column); return element; }
+
+    /// <summary>
+    /// Add Grid.ColumnSpan attached property to an element.
+    /// </summary>
+    /// <typeparam name="T">Type of UIElement to extend.</typeparam>
+    /// <param name="element">Element to extend.</param>
+    /// <param name="columnSpan">ColumnSpan to set.</param>
+    /// <returns>Fluent-reference to self.</returns>
+    public static T ColumnSpan<T>(this T element, int columnSpan) where T : UIElement { Grid.SetColumnSpan(element, columnSpan); return element; }
+
+    /// <summary>
+    /// Add Grid.RowSpan attached property to an element.
+    /// </summary>
+    /// <typeparam name="T">Type of UIElement to extend.</typeparam>
+    /// <param name="element">Element to extend.</param>
+    /// <param name="rowSpan">RowSpan to set.</param>
+    /// <returns>Fluent-reference to self.</returns>
+    public static T RowSpan<T>(this T element, int rowSpan) where T : UIElement { Grid.SetRowSpan(element, rowSpan); return element; }
 
     private static IEnumerable<GridLength> stringToGridLengths(string specification)
         => specification.Split(',').Select(x => _converter.ConvertFromString(string.IsNullOrWhiteSpace(x) ? "1*" : x)).Cast<GridLength>();
