@@ -46,13 +46,13 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: package
-        path: src/bin/release/*.nupkg
+        path: src/WpfExtensions/bin/release/*.nupkg
     - name: Create Zip for Release
-      run: compress-archive -Path src\bin\release\*.nupkg -Destination package.zip -Force
+      run: compress-archive -Path src\WpfExtensions\bin\release\*.nupkg -Destination package.zip -Force
     - name: Get version
       id: vars
       run: |
-        $env:ver = Get-Content src\bin\release\ver.txt
+        $env:ver = Get-Content src\WpfExtensions\bin\release\ver.txt
         echo version=$env:ver >> $env:GITHUB_OUTPUT
     - name: Test output
       run: echo ${{ steps.vars.outputs.version }}      
@@ -74,4 +74,4 @@ jobs:
         echo "Adding local repo as nuget source"
         dotnet nuget add source --username tudormobile --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/tudormobile/index.json"
         echo "Pushing package"
-        dotnet nuget push "src\bin\release\*.nupkg" --source "github" --skip-duplicate
+        dotnet nuget push "src\WpfExtensions\bin\release\*.nupkg" --source "github" --skip-duplicate
