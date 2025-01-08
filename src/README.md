@@ -1,9 +1,7 @@
 # WpfExtensions
-WPF Extension Methods
+WPF Extension Methods  
 
-[![Build and Deploy](https://github.com/tudormobile/WpfExtensions/actions/workflows/dotnet.yml/badge.svg)](https://github.com/tudormobile/WpfExtensions/actions/workflows/dotnet.yml)  [![Publish Docs](https://github.com/tudormobile/WpfExtensions/actions/workflows/docs.yml/badge.svg)](https://github.com/tudormobile/WpfExtensions/actions/workflows/docs.yml)  [![Create Package Release](https://github.com/tudormobile/WpfExtensions/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/tudormobile/WpfExtensions/actions/workflows/dotnet.yml)
-
-Copyright&copy;Tudormobile LLC
+Copyright&copy;Tudormobile LLC  
 [Source Code](https://github.com/tudormobile/WpfExtensions) | [Documentation](https://tudormobile.github.io/WpfExtensions/) | [API documentation](https://tudormobile.github.io/WpfExtensions/api/Tudormobile.html)
 ## Getting Started
 ### Install the package
@@ -48,4 +46,4 @@ The API documentation can be found on *github pages* here - [API Documentation](
 ### Sample Code
 Code samples are located in the *samples* folder of the github repository.
 ### Feedback
-**Tudormobile.WpfExtensions** is released as open source under the MIT license. Bug reports and contributions are welcome at the [the github repository](https://tudormobile.github.io/WpfExtensions/api/Tudormobile.html).
+**Tudormobile.WpfExtensions** is released as open source under the MIT license. Bug reports and contributions are welcome at the [the github repository](https://github.com/tudormobile/WpfExtensions).

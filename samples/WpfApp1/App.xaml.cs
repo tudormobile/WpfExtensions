@@ -1,19 +1,16 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Media;
 using Tudormobile.WpfExtensions;
-using static WpfExtensions.UI;
+using static Tudormobile.WpfExtensions.UI;
 
 namespace WpfApp1
 {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : Application, ICommand
+    public partial class App : Application
     {
-        public event EventHandler? CanExecuteChanged;
-
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -35,6 +32,7 @@ namespace WpfApp1
             };
             MainWindow.Show();
 
+            var model = new AppModel();
             var loginWindow = new Window()
             {
                 Title = "Login",
@@ -46,51 +44,26 @@ namespace WpfApp1
                         CenteredText("Username:").Row(0).Column(0),
                         CenteredText("Password:").Row(1).Column(0),
 
-                        Entry().Row(0).Column(1).Margin(4).Bind(nameof(Username)).DataContext(this),
-                        Entry().Row(1).Column(1).Margin(4).Bind(nameof(Password)).DataContext(this),
+                        Entry().Row(0).Column(1).Margin(4).Bind(nameof(AppModel.Username)),
+                        Entry().Row(1).Column(1).Margin(4).Bind(nameof(AppModel.Password)),
 
                         new Button()
                             .Alignment(HorizontalAlignment.Right)
-                            .Content("OK").CommandBinding(nameof(OKButtonCommand), nameof(OKButtonParameter)).DataContext(this)
+                            .Content("OK").CommandBinding(nameof(AppModel.OKButtonCommand), nameof(AppModel.OKButtonParameter))
                             .Size(120, 24).Margin(4).Row(2).Column(1)
-                            .OnClick((sender, args)=>{MessageBox.Show($"Login OK; user/pass={Username}/{Password}"); Window.GetWindow(sender as DependencyObject).Close(); }),
+                            .OnClick((sender, args)=>{MessageBox.Show($"Login OK; user/pass={model.Username}/{model.Password}"); Window.GetWindow(sender as DependencyObject).Close(); }),
                     }
-                }.Rows(3).Columns("Auto,1*").Margin(10)
+                }.Rows(3).Columns("Auto,1*").Margin(10).DataContext(model)
             };
             loginWindow.ShowDialog();
         }
 
-        public ICommand OKButtonCommand => this;
-
-        public string OKButtonParameter => "This is the OK button parameter";
-
-        public string Username { get; set; } = "Default username";
-        public string Password { get; set; } = "Default password";
 
 
-        public bool CanExecute(object? parameter)
-        {
-            MessageBox.Show($"CanExecute() was called with parameter = '{parameter?.ToString() ?? String.Empty}'");
-            return true;
-        }
 
-        public void Execute(object? parameter)
-        {
-            MessageBox.Show($"Execute() was called with parameter = '{parameter?.ToString() ?? String.Empty}'");
-        }
     }
 
 
 
-}
-
-namespace WpfExtensions
-{
-    public static class UI
-    {
-        public static TextBlock CenteredText(string? text) => new TextBlock() { Text = text }.Alignment(HorizontalAlignment.Center, VerticalAlignment.Center);
-        public static TextBox Entry() => new TextBox() { VerticalContentAlignment = VerticalAlignment.Center }.Size(200, 24);
-
-    }
 }
 
