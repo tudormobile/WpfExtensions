@@ -16,7 +16,7 @@ public static class TextBoxExtensions
     /// <returns>Fluent-reference to the extended object.</returns>
     public static TextBox Bind(this TextBox textBox, string path)
     {
-        textBox.SetBinding(TextBox.TextProperty, new Binding(path) { Mode = BindingMode.TwoWay });
+        textBox.SetBinding(TextBox.TextProperty, new Binding(path) { Mode = BindingMode.TwoWay, UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged });
 
         return textBox;
     }

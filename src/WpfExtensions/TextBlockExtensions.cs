@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Media;
 
 namespace Tudormobile.WpfExtensions;
@@ -185,5 +186,18 @@ public static class TextBlockExtensions
     /// <param name="textBlock">TextBlock to extend.</param>
     /// <returns>Fluent reference to extended object.</returns>
     public static TextBlock WrapWithOverflow(this TextBlock textBlock) { textBlock.TextWrapping = System.Windows.TextWrapping.WrapWithOverflow; return textBlock; }
+
+    /// <summary>
+    /// Add one-way binding to the Text property.
+    /// </summary>
+    /// <param name="textBlock">TextBlock to extend.</param>
+    /// <param name="path">Binding path.</param>
+    /// <returns>Fluent-reference to the extended object.</returns>
+    public static TextBlock Bind(this TextBlock textBlock, string path)
+    {
+        textBlock.SetBinding(TextBlock.TextProperty, new Binding(path) { Mode = BindingMode.OneWay });
+
+        return textBlock;
+    }
 
 }

@@ -240,4 +240,14 @@ public class TextBlockExtensionsTests
         Assert.AreEqual(expected, actual);
     }
 
+    [STATestMethod]
+    public void BindTest()
+    {
+        var expected = "bindingPath";
+        var target = new TextBlock();
+        Assert.AreSame(target, target.Bind(expected));
+        var actual = target.GetBindingExpression(TextBlock.TextProperty).ParentBinding.Path.Path;
+        Assert.AreEqual(expected, actual);
+    }
+
 }
