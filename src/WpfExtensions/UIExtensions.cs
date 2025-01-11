@@ -1,5 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
+using Tudormobile.WpfExtensions.Adorners;
 
 namespace Tudormobile.WpfExtensions;
 
@@ -24,12 +26,6 @@ public static partial class UI
     /// <param name="text">Text</param>
     /// <returns>TextBlock element.</returns>
     public static TextBlock CenteredText(string? text) => new TextBlock() { Text = text }.Alignment(HorizontalAlignment.Center, VerticalAlignment.Center);
-
-    /// <summary>
-    /// Creates a TextBox
-    /// </summary>
-    /// <returns>TextBox element.</returns>
-    public static TextBox Entry(int width = 200, int height = 24) => new TextBox() { VerticalContentAlignment = VerticalAlignment.Center }.Size(width, height);
 
     /// <summary>
     /// Creates a simple MainMenu for an application.
@@ -66,4 +62,47 @@ public static partial class UI
             }
         };
     }
+
+    /// <summary>
+    /// Creates a TextBox with optional width and height.
+    /// </summary>
+    /// <param name="height">Height of the TextBox</param>
+    /// <param name="width">Width of the TextBox</param>
+    /// <returns>TextBox element.</returns>
+    public static TextBox Entry(double width = double.NaN, double height = double.NaN)
+    => Entry(string.Empty, width, height);
+
+    /// <summary>
+    /// Creates a TextBox with a prompt.
+    /// </summary>
+    /// <param name="width">Width of the TextBox</param>
+    /// <param name="height">Height of the TextBox</param>
+    /// <param name="prompt">Prompt text</param>
+    /// <returns>TextBox element.</returns>
+    public static TextBox Entry(string prompt, double width = double.NaN, double height = double.NaN)
+    {
+        var tb = new TextBox()
+            .Padding(2, 4).Size(width, height).Alignment(vertical: VerticalAlignment.Center);
+
+        if (!string.IsNullOrEmpty(prompt))
+        {
+            tb.SizeChanged += (s, e) =>
+            {
+                var layer = AdornerLayer.GetAdornerLayer(tb);
+                var adorners = layer?.GetAdorners(tb)?.Length;
+                if (layer != null && (adorners == null || adorners == 0))
+                {
+                    var a = new TextAdorner(tb, prompt);
+                    a.IsHitTestVisible = false;
+                    layer.Add(a);
+                    tb.GotKeyboardFocus += a.InvalidateAdorner;
+                    tb.LostKeyboardFocus += a.InvalidateAdorner;
+                    tb.TextChanged += a.InvalidateAdorner;
+                }
+            };
+        }
+        return tb.Margin(4).VerticalAlignment(VerticalAlignment.Center);
+    }
+
 }
+
