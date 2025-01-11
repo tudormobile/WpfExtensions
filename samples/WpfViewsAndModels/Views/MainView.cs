@@ -28,7 +28,14 @@ namespace WpfViewsAndModels.Views
         {
             return new Window()
             {
-                Content = CreateView(),
+                Content = new Grid()
+                {
+                    Children =
+                    {
+                        UI.MainMenu(),
+                        CreateView().Row(1)
+                    }
+                }.Rows("Auto, *"),
                 SizeToContent = SizeToContent.WidthAndHeight,
             };
         }

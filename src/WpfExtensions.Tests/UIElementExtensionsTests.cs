@@ -42,4 +42,13 @@ public class UIElementExtensionsTests
         Assert.AreEqual(expected, actual);
     }
 
+    [TestMethod]
+    public void DisableTest()
+    {
+        var expected = false;
+        var target = new TextBlock();
+        Assert.AreSame(target, target.Disable());
+        var actual = target.IsEnabled;
+        Assert.AreEqual(expected, actual);
+    }
 }
