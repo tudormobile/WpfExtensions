@@ -3,7 +3,7 @@
 namespace Tudormobile.WpfExtensions;
 
 /// <summary>
-/// Headered Content Control Extensions.
+/// HeaderedContentControl Extension Methods.
 /// </summary>
 public static class HeaderedContentControlExtensions
 {
@@ -14,7 +14,7 @@ public static class HeaderedContentControlExtensions
     /// <param name="control">Control to extend.</param>
     /// <param name="header">Header value to use.</param>
     /// <param name="headerStringFormat">OPTIONS; string format to use.</param>
-    /// <returns>Fluent-reference to the extended control.</returns>
+    /// <returns>The extended control.</returns>
     public static T Header<T>(this T control, object header, string? headerStringFormat = null) where T : HeaderedContentControl
     {
         control.Header = header;

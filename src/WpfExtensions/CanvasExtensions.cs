@@ -4,7 +4,7 @@ using System.Windows.Controls;
 namespace Tudormobile.WpfExtensions;
 
 /// <summary>
-/// Canvas Extensions.
+/// Canvas Extension Methods.
 /// </summary>
 public static class CanvasExtensions
 {
@@ -14,7 +14,7 @@ public static class CanvasExtensions
     /// <typeparam name="T">Type of element to extend.</typeparam>
     /// <param name="element">Element to extend.</param>
     /// <param name="bottom">Value to use.</param>
-    /// <returns>Fluent-reference to the extended object.</returns>
+    /// <returns>The extended object.</returns>
     public static T Bottom<T>(this T element, double bottom) where T : UIElement { Canvas.SetBottom(element, bottom); return element; }
 
     /// <summary>
@@ -23,7 +23,7 @@ public static class CanvasExtensions
     /// <typeparam name="T">Type of element to extend.</typeparam>
     /// <param name="element">Element to extend.</param>
     /// <param name="left">The left value to use.</param>
-    /// <returns>Fluent-reference to the extended object.</returns>
+    /// <returns>The extended object.</returns>
     public static T Left<T>(this T element, double left) where T : UIElement { Canvas.SetLeft(element, left); return element; }
 
     /// <summary>
@@ -32,7 +32,7 @@ public static class CanvasExtensions
     /// <typeparam name="T">Type of element to extend.</typeparam>
     /// <param name="element">Element to extend.</param>
     /// <param name="right">The right value to use.</param>
-    /// <returns>Fluent-reference to the extended object.</returns>
+    /// <returns>The extended object.</returns>
     public static T Right<T>(this T element, double right) where T : UIElement { Canvas.SetRight(element, right); return element; }
 
     /// <summary>
@@ -41,7 +41,7 @@ public static class CanvasExtensions
     /// <typeparam name="T">Type of element to extend.</typeparam>
     /// <param name="element">Element to extend.</param>
     /// <param name="top">The top value to use.</param>
-    /// <returns>Fluent-reference to the extended object.</returns>
+    /// <returns>The extended object.</returns>
     public static T Top<T>(this T element, double top) where T : UIElement { Canvas.SetTop(element, top); return element; }
 
     /// <summary>
@@ -50,7 +50,7 @@ public static class CanvasExtensions
     /// <typeparam name="T">Type of element to extend.</typeparam>
     /// <param name="element">Element to extend.</param>
     /// <param name="zIndex">The z-index value to use.</param>
-    /// <returns>Fluent-reference to the extended object.</returns>
+    /// <returns>The extended object.</returns>
     public static T ZIndex<T>(this T element, int zIndex) where T : UIElement { Panel.SetZIndex(element, zIndex); return element; }
 
     /// <summary>
@@ -63,7 +63,7 @@ public static class CanvasExtensions
     /// <param name="right">The right value to use.</param>
     /// <param name="bottom">The bottom value to use.</param>
     /// <param name="zIndex">The z-index value to use.</param>
-    /// <returns>Fluent-reference to the extended object.</returns>
+    /// <returns>The extended object.</returns>
     public static T Location<T>(this T element, double? left = null, double? top = null, double? right = null, double? bottom = null, int? zIndex = null) where T : UIElement
     {
         if (left != null) Canvas.SetLeft(element, left.Value);

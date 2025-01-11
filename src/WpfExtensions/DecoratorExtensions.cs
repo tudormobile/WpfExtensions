@@ -4,7 +4,7 @@ using System.Windows.Controls;
 namespace Tudormobile.WpfExtensions;
 
 /// <summary>
-/// Decorator Extensions.
+/// Decorator Extension Methods.
 /// </summary>
 public static class DecoratorExtensions
 {
@@ -14,6 +14,6 @@ public static class DecoratorExtensions
     /// <typeparam name="T">Type of element.</typeparam>
     /// <param name="element">Element to extend.</param>
     /// <param name="child">Child to add.</param>
-    /// <returns>Fluent-reference to the extended element.</returns>
+    /// <returns>The extended element.</returns>
     public static T Child<T>(this T element, UIElement child) where T : Decorator { element.Child = child; return element; }
 }

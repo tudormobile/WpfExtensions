@@ -10,7 +10,6 @@ _layout: landing
 - [Getting Started](getting-started.md)
 - [API Documentation](api/Tudormobile.md)
 
+[`Source Code`](https://github.com/tudormobile/WpfExtensions)  
 
-[`Source Code`](https://github.com/tudormobile/WpfExtensions) | [Nuget Package](https://nuget.org)  
-
-<support@tudormobile.com>
+:e-mail:<support@tudormobile.com>

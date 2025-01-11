@@ -3,7 +3,7 @@
 namespace Tudormobile.WpfExtensions;
 
 /// <summary>
-/// Content Control Extension Methods
+/// Content Control Extension Methods.
 /// </summary>
 public static class ContentControlExtensions
 {
@@ -13,7 +13,7 @@ public static class ContentControlExtensions
     /// <typeparam name="T">Type of content control.</typeparam>
     /// <param name="contentControl">Content control to extend.</param>
     /// <param name="content">Content to set.</param>
-    /// <returns>Fluent-reference to self.</returns>
+    /// <returns>The extended element.</returns>
     public static T Content<T>(this T contentControl, object content) where T : ContentControl { contentControl.Content = content; return contentControl; }
 
 }

@@ -4,7 +4,7 @@ using System.Windows.Data;
 namespace Tudormobile.WpfExtensions;
 
 /// <summary>
-/// TextBox Extensions.
+/// TextBox Extension Methods.
 /// </summary>
 public static class TextBoxExtensions
 {
@@ -13,7 +13,7 @@ public static class TextBoxExtensions
     /// </summary>
     /// <param name="textBox">TextBox to extend.</param>
     /// <param name="path">Binding path.</param>
-    /// <returns>Fluent-reference to the extended object.</returns>
+    /// <returns>The extended object.</returns>
     public static TextBox Bind(this TextBox textBox, string path)
     {
         textBox.SetBinding(TextBox.TextProperty, new Binding(path) { Mode = BindingMode.TwoWay, UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged });

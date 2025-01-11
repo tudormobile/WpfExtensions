@@ -4,7 +4,7 @@ using System.Windows.Controls;
 namespace Tudormobile.WpfExtensions;
 
 /// <summary>
-/// Dock Panel Extensions.
+/// DockPanel Extension Methods.
 /// </summary>
 public static class DockPanelExtensions
 {
@@ -14,7 +14,7 @@ public static class DockPanelExtensions
     /// <typeparam name="T">Type of element.</typeparam>
     /// <param name="uiElement">Element to extend.</param>
     /// <param name="dock">Dock value to use.</param>
-    /// <returns>Fluent-reference to extended element.</returns>
+    /// <returns>The extended object.</returns>
     public static T Dock<T>(this T uiElement, Dock dock) where T : UIElement { DockPanel.SetDock(uiElement, dock); return uiElement; }
 
     /// <summary>
@@ -22,7 +22,7 @@ public static class DockPanelExtensions
     /// </summary>
     /// <typeparam name="T">Type of element.</typeparam>
     /// <param name="uiElement">Element to extend.</param>
-    /// <returns>Fluent-reference to extended element.</returns>
+    /// <returns>The extended object.</returns>
     public static T Left<T>(this T uiElement) where T : UIElement { DockPanel.SetDock(uiElement, System.Windows.Controls.Dock.Left); return uiElement; }
 
     /// <summary>
@@ -30,7 +30,7 @@ public static class DockPanelExtensions
     /// </summary>
     /// <typeparam name="T">Type of element.</typeparam>
     /// <param name="uiElement">Element to extend.</param>
-    /// <returns>Fluent-reference to extended element.</returns>
+    /// <returns>The extended object.</returns>
     public static T Top<T>(this T uiElement) where T : UIElement { DockPanel.SetDock(uiElement, System.Windows.Controls.Dock.Top); return uiElement; }
 
     /// <summary>
@@ -38,7 +38,7 @@ public static class DockPanelExtensions
     /// </summary>
     /// <typeparam name="T">Type of element.</typeparam>
     /// <param name="uiElement">Element to extend.</param>
-    /// <returns>Fluent-reference to extended element.</returns>
+    /// <returns>The extended object.</returns>
     public static T Right<T>(this T uiElement) where T : UIElement { DockPanel.SetDock(uiElement, System.Windows.Controls.Dock.Right); return uiElement; }
 
     /// <summary>
@@ -46,6 +46,6 @@ public static class DockPanelExtensions
     /// </summary>
     /// <typeparam name="T">Type of element.</typeparam>
     /// <param name="uiElement">Element to extend.</param>
-    /// <returns>Fluent-reference to extended element.</returns>
+    /// <returns>The extended object.</returns>
     public static T Bottom<T>(this T uiElement) where T : UIElement { DockPanel.SetDock(uiElement, System.Windows.Controls.Dock.Bottom); return uiElement; }
 }
