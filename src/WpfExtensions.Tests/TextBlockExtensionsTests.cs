@@ -9,6 +9,26 @@ namespace WpfExtensions.Tests;
 public class TextBlockExtensionsTests
 {
     [STATestMethod]
+    public void FontFamilyTest1()
+    {
+        var expected = "Arial";
+        var target = new TextBlock();
+        Assert.AreSame(target, target.FontFamily(expected));
+        var actual = target.FontFamily.Source;
+        Assert.AreEqual(expected, actual);
+    }
+
+    [STATestMethod]
+    public void FontFamilyTest2()
+    {
+        var expected = new FontFamily("Arial");
+        var target = new TextBlock();
+        Assert.AreSame(target, target.FontFamily(expected));
+        var actual = target.FontFamily;
+        Assert.AreEqual(expected, actual);
+    }
+
+    [STATestMethod]
     public void TextTest()
     {
         var expected = "this is a test";

@@ -46,4 +46,4 @@ The API documentation can be found on *github pages* here - [API Documentation](
 ### Sample Code
 Code samples are located in the *samples* folder of the github repository.
 ### Feedback
-**Tudormobile.WpfExtensions** is released as open source under the MIT license. Bug reports and contributions are welcome at the [the github repository](https://github.com/tudormobile/WpfExtensions).
+**Tudormobile.WpfExtensions** is released as open source under the MIT license. Bug reports are welcome at the [the github repository](https://github.com/tudormobile/WpfExtensions).
