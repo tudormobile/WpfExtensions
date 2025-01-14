@@ -9,6 +9,24 @@ namespace Tudormobile.WpfExtensions;
 public static class ControlExtensions
 {
     /// <summary>
+    /// Set the border thickness property to zero (no border).
+    /// </summary>
+    /// <typeparam name="T">Type of control to extend.</typeparam>
+    /// <param name="control">The control to extend.</param>
+    /// <returns>The extended control.</returns>
+    public static T NoBorder<T>(this T control) where T : Control { control.BorderThickness = new(0); return control; }
+
+    /// <summary>
+    /// Set the minimum width and height properties.
+    /// </summary>
+    /// <typeparam name="T">Type of control to extend.</typeparam>
+    /// <param name="control">The control to extend.</param>
+    /// <param name="width">OPTIONAL; minimum width of the control (DEFAULT=0).</param>
+    /// <param name="height">OPTIONAL; minimum height of the control (DEFAULT=0).</param>
+    /// <returns>The extended control.</returns>
+    public static T MinSize<T>(this T control, double width = 0, double height = 0) where T : FrameworkElement { control.MinWidth = width; control.MinHeight = height; return control; }
+
+    /// <summary>
     /// Set the padding property.
     /// </summary>
     /// <typeparam name="T">Type of control to extend.</typeparam>

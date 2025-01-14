@@ -200,4 +200,20 @@ public static class TextBlockExtensions
         return textBlock;
     }
 
+    /// <summary>
+    /// Sets the FontFamily of the text block.
+    /// </summary>
+    /// <param name="textBlock">TextBlock to extend.</param>
+    /// <param name="fontFamily">Font family name, e.g., "Arial"</param>
+    /// <returns>The extended TextBlock.</returns>
+    public static TextBlock FontFamily(this TextBlock textBlock, string fontFamily) { textBlock.FontFamily = new FontFamily(fontFamily); return textBlock; }
+
+    /// <summary>
+    /// Sets the FontFamily of the text block.
+    /// </summary>
+    /// <param name="textBlock">TextBlock to extend.</param>
+    /// <param name="fontFamily">Font family to use.</param>
+    /// <returns>The extended TextBlock.</returns>
+    public static TextBlock FontFamily(this TextBlock textBlock, FontFamily fontFamily) { textBlock.FontFamily = fontFamily; return textBlock; }
+
 }

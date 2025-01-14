@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="data\navigation_items.js" />
+    <None Remove="images\collections.png" />
+    <None Remove="images\icon16x16.png" />
+    <None Remove="images\icon256x256.png" />
+    <None Remove="images\icon32x32.png" />
+    <None Remove="images\icon64x64.png" />
+    <None Remove="images\input.png" />
+    <None Remove="images\layout.png" />
+    <None Remove="images\menu.png" />
+    <None Remove="images\text.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AppIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\WpfExtensions\WpfExtensions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="data\navigation_items.js" />
+    <Resource Include="images\all.png" />
+    <Resource Include="images\collections.png" />
+    <Resource Include="images\icon16x16.png" />
+    <Resource Include="images\icon256x256.png" />
+    <Resource Include="images\icon32x32.png" />
+    <Resource Include="images\icon64x64.png" />
+    <Resource Include="images\input.png" />
+    <Resource Include="images\layout.png" />
+    <Resource Include="images\menu.png" />
+    <Resource Include="images\text.png" />
+  </ItemGroup>
+
+</Project>

@@ -104,5 +104,25 @@ public static partial class UI
         return tb.Margin(4).VerticalAlignment(VerticalAlignment.Center);
     }
 
+    /// <summary>
+    /// Suitable 'Header' for a control with Symbol-Icon (Segoe Fluent Icons) and Text.
+    /// </summary>
+    /// <param name="icon">Symbol-icon code point.</param>
+    /// <param name="text">Text to use.</param>
+    /// <returns>
+    /// A horizontally-aligned StackPanel element with a vertically-centered smbol-icon,
+    /// based on the Segoe Fluent Icons font, and a text block.
+    /// </returns>
+    public static FrameworkElement IconHeader(string icon, string text) => new StackPanel()
+    {
+        Children =
+            {
+                new TextBlock().FontFamily("Segoe Fluent Icons").FontSize(16)
+                    .Text(icon).Alignment(vertical: VerticalAlignment.Center).Margin(14,0).Padding(4),
+                new TextBlock().Text(text).Alignment(vertical: VerticalAlignment.Center).Margin(0,10,22,10)
+            }
+    }.Horizontal();
+
+
 }
 
