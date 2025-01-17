@@ -2,7 +2,7 @@
 using System.Windows.Media;
 using Tudormobile.WpfExtensions;
 
-namespace WpfExtensionsGallery.views
+namespace WpfExtensionsGallery.Views
 {
     /// <summary>
     /// Interaction logic for HomeView.xaml
