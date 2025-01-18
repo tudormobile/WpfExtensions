@@ -103,4 +103,80 @@ public static class ButtonExtensions
         return button;
     }
 
+    /// <summary>
+    /// Sets the IsChecked property of a ToggleButton to true.
+    /// </summary>
+    /// <typeparam name="T">Type of toggle button to extend.</typeparam>
+    /// <param name="element">Element to extend.</param>
+    /// <returns>The extended element.</returns>
+    public static T IsChecked<T>(this T element) where T : ToggleButton
+    {
+        element.IsChecked = true;
+        return element;
+    }
+
+    /// <summary>
+    /// Sets the IsThreeState property of a ToggleButton to true.
+    /// </summary>
+    /// <typeparam name="T">Type of toggle button to extend.</typeparam>
+    /// <param name="element">Element to extend.</param>
+    /// <returns>The extended element.</returns>
+    public static T IsThreeState<T>(this T element) where T : ToggleButton
+    {
+        element.IsThreeState = true;
+        return element;
+    }
+
+    /// <summary>
+    /// Adds a handler to the Indeterminate event of a ToggleButton.
+    /// </summary>
+    /// <typeparam name="T">Type of toggle button to extend.</typeparam>
+    /// <param name="element">Element to extend.</param>
+    /// <param name="handler">Handler to add.</param>
+    /// <returns>The extended element.</returns>
+    public static T OnIndeterminate<T>(this T element, RoutedEventHandler handler) where T : ToggleButton
+    {
+        element.Indeterminate += handler;
+        return element;
+    }
+
+    /// <summary>
+    /// Adds a handler to the Checked event of a ToggleButton.
+    /// </summary>
+    /// <typeparam name="T">Type of toggle button to extend.</typeparam>
+    /// <param name="element">Element to extend.</param>
+    /// <param name="handler">Handler to add.</param>
+    /// <returns>The extended element.</returns>
+    public static T OnChecked<T>(this T element, RoutedEventHandler handler) where T : ToggleButton
+    {
+        element.Checked += handler;
+        return element;
+    }
+
+    /// <summary>
+    /// Adds a handler to the Unchecked event of a ToggleButton.
+    /// </summary>
+    /// <typeparam name="T">Type of toggle button to extend.</typeparam>
+    /// <param name="element">Element to extend.</param>
+    /// <param name="handler">Handler to add.</param>
+    /// <returns>The extended element.</returns>
+    public static T OnUnchecked<T>(this T element, RoutedEventHandler handler) where T : ToggleButton
+    {
+        element.Unchecked += handler;
+        return element;
+    }
+
+    /// <summary>
+    /// Sets the Width property of a ButtonBase element.
+    /// </summary>
+    /// <typeparam name="T">Type of element to extend.</typeparam>
+    /// <param name="element">Element to extend.</param>
+    /// <param name="width">The value to use for Width.</param>
+    /// <returns>The extended element.</returns>
+    public static T Width<T>(this T element, double width) where T : ButtonBase
+    {
+        element.Width = width;
+        return element;
+    }
+
 }
