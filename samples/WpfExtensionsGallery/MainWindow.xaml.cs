@@ -100,7 +100,7 @@ namespace WpfExtensionsGallery
             (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description")),
+            (() => new Views.InputView()),
             (() => new Views.TextView()),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description")),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description")),
