@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace Tudormobile.WpfExtensions;
 
@@ -125,5 +126,18 @@ public static class FrameworkElementExtentions
     /// <param name="toolTip">ToolTip value.</param>
     /// <returns>The extended object.</returns>
     public static T ToolTip<T>(this T element, object toolTip) where T : FrameworkElement { element.ToolTip = toolTip; return element; }
+
+    /// <summary>
+    /// Sets the ContextMenu property.
+    /// </summary>
+    /// <typeparam name="T">Type of framework element.</typeparam>
+    /// <param name="element">Framework element to extend.</param>
+    /// <param name="contextMenu">Context Menu value to use.</param>
+    /// <returns>The extended element.</returns>
+    public static T ContextMenu<T>(this T element, ContextMenu contextMenu) where T : FrameworkElement
+    {
+        element.ContextMenu = contextMenu;
+        return element;
+    }
 
 }

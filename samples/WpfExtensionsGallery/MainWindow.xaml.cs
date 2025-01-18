@@ -96,12 +96,12 @@ namespace WpfExtensionsGallery
 
         public static Func<FrameworkElement>[] Views =
         [
-            (() => new views.HomeView()),
+            (() => new Views.HomeView()),
+            (() => new Views.MenuView()),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description")),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description")),
+            (() => new Views.InputView()),
+            (() => new Views.TextView()),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description")),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description")),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description")),

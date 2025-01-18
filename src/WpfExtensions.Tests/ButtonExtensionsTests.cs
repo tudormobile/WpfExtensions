@@ -124,4 +124,67 @@ public class ButtonExtensionsTests
         public void Execute(object? parameter) => throw new NotImplementedException();
         protected virtual void OnCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
     }
+
+    [TestMethod]
+    public void IsCheckedTest()
+    {
+        var expected = true;
+        var target = new CheckBox();
+        Assert.AreSame(target, target.IsChecked());
+        var actual = target.IsChecked;
+        Assert.AreEqual(expected, actual);
+    }
+
+    [TestMethod]
+    public void IsThreeStateTest()
+    {
+        var expected = true;
+        var target = new CheckBox();
+        Assert.AreSame(target, target.IsThreeState());
+        var actual = target.IsThreeState;
+        Assert.AreEqual(expected, actual);
+    }
+
+    [TestMethod]
+    public void OnIndeterminateTest()
+    {
+        var expected = true;
+        var actual = false;
+        var target = new CheckBox();
+        Assert.AreSame(target, target.OnIndeterminate((s, e) => { actual = true; }));
+        target.RaiseEvent(new RoutedEventArgs(CheckBox.IndeterminateEvent));
+        Assert.AreEqual(expected, actual);
+    }
+
+    [TestMethod]
+    public void OnCheckedTest()
+    {
+        var expected = true;
+        var actual = false;
+        var target = new CheckBox();
+        Assert.AreSame(target, target.OnChecked((s, e) => { actual = true; }));
+        target.RaiseEvent(new RoutedEventArgs(CheckBox.CheckedEvent));
+        Assert.AreEqual(expected, actual);
+    }
+
+    [TestMethod]
+    public void OnUncheckedTest()
+    {
+        var expected = true;
+        var actual = false;
+        var target = new CheckBox();
+        Assert.AreSame(target, target.OnUnchecked((s, e) => { actual = true; }));
+        target.RaiseEvent(new RoutedEventArgs(CheckBox.UncheckedEvent));
+        Assert.AreEqual(expected, actual);
+    }
+
+    [TestMethod]
+    public void WidthTest()
+    {
+        var expected = 12.34;
+        var target = new CheckBox();
+        Assert.AreSame(target, target.Width(expected));
+        var actual = target.Width;
+        Assert.AreEqual(expected, actual);
+    }
 }
