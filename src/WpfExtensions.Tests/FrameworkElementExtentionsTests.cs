@@ -101,6 +101,16 @@ public class FrameworkElementExtentionsTests
     }
 
     [STATestMethod]
+    public void ContextMenuTest()
+    {
+        var expected = new ContextMenu();
+        var target = new TextBlock();
+        Assert.AreSame(target, target.ContextMenu(expected));
+        var actual = target.ContextMenu;
+        Assert.AreEqual(expected, actual);
+    }
+
+    [STATestMethod]
     public void DataContextTest()
     {
         var expected = "this is some context";

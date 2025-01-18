@@ -97,7 +97,7 @@ namespace WpfExtensionsGallery
         public static Func<FrameworkElement>[] Views =
         [
             (() => new Views.HomeView()),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
+            (() => new Views.MenuView()),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
             (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
             (() => new Views.InputView()),
