@@ -98,14 +98,11 @@ namespace WpfExtensionsGallery
         [
             (() => new Views.HomeView()),
             (() => new Views.MenuView()),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description").Alignment(HorizontalAlignment.Stretch)),
+            (() => new Views.PanelView()),
+            (() => new Views.ItemsView()),
             (() => new Views.InputView()),
             (() => new Views.TextView()),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description")),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description")),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description")),
-            (() => new TextBlock().Bind("SelectedNavigationItem.Description"))
+            (() => new Views.ControlsView()),
         ];
     }
 }
