@@ -17,4 +17,14 @@ public class ImageExtensionsTests
         var actual = target.Source;
         Assert.AreEqual(expected, actual);
     }
+
+    [TestMethod]
+    public void SourceTest1()
+    {
+        var expected = "/images/icon64x64.png";
+        var target = new Image();
+        Assert.AreEqual(target, target.Source(expected));
+        var actual = target.Source;
+        Assert.IsInstanceOfType(actual, typeof(BitmapImage));
+    }
 }

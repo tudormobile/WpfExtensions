@@ -37,8 +37,8 @@
         "symbol": "\ue8d2"
     },
     {
-        "title": "All Controls",
-        "description": "All controls showcasing data binding.",
+        "title": "Controls",
+        "description": "Various controls demostrating library extension methods.",
         "image": "/images/all.png",
         "symbol": "\ue71d"
     }
