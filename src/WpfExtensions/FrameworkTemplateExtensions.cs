@@ -13,9 +13,9 @@ public static class FrameworkTemplateExtensions
         internal static readonly DependencyProperty FactoryProperty
             = DependencyProperty.Register("Factory", typeof(Func<object>), typeof(_contentControl), new PropertyMetadata(null, (s, e) =>
             {
-                var control = s as _contentControl;
+                var control = (ContentControl)s;
                 var factory = e.NewValue as Func<object>;
-                if (control != null && factory != null)
+                if (factory != null)
                 {
                     control.Content = factory();
                 }

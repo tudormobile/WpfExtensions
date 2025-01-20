@@ -32,6 +32,9 @@ namespace WpfExtensionsGallery.Views
                     new Button().Content("Button").Margin(4).Padding(4).Width(100),
                     new CheckBox().Content("CheckBox").Margin(4),
                     new CheckBox().Content("CheckBox 3-state initially 'checked'").Margin(4).IsThreeState().IsChecked(),
+                    new ComboBox().Editable().Text("Editable ComboBox").Margin(4),
+                    new ComboBox().ReadOnly(["Read-Only", "ComboBox", "With", "Items"]).Margin(4).Select(0),
+                    new ComboBox().ReadOnly<DayOfWeek>(DayOfWeek.Wednesday).Margin(4),
                 }
             };
 
@@ -40,9 +43,18 @@ namespace WpfExtensionsGallery.Views
                 Children =
                 {
                     new TextBlock().Text("Shapes & Images").Margin(4).Center(),
-                    new Rectangle().Fill(Brushes.Red).Size(40, 50).Margin(4),
-                    new Ellipse().Stroke(Brushes.Red, 2.5).Size(40, 50).Margin(4),
-                    new Image().Source("/images/icon64x64.png").Size(64,64).Margin(4),
+                    new WrapPanel()
+                    {
+                        Children =
+                        {
+                            new Rectangle().Fill(Brushes.Red).Size(40, 50).Margin(4),
+                            new Ellipse().Stroke(Brushes.Red, 2.5).Size(40, 50).Margin(4),
+                            new Image().Source("/images/icon64x64.png").Size(64,64).Margin(4),
+                            new Calendar().Margin(4).Month().DisplayDate(new DateTime(1964,1,1)),
+                            new Calendar().Margin(4).Year(),
+                            new Calendar().Margin(4).Decade(),
+                        }
+                    },
                 }
             };
 
