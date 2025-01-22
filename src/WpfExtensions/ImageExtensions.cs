@@ -29,4 +29,35 @@ public static class ImageExtensions
         return image;
     }
 
+    /// <summary>
+    /// Sets the Stretch property to 'Uniform' with an optional StretchDirection.
+    /// </summary>
+    /// <param name="image">Image to extend.</param>
+    /// <param name="direction">OPTIONAL; Stretch direction to use (default=Both).</param>
+    /// <returns>The extended element.</returns>
+    public static Image Uniform(this Image image, StretchDirection direction = StretchDirection.Both) { image.Stretch = Stretch.Uniform; image.StretchDirection = direction; return image; }
+
+    /// <summary>
+    /// Sets the Stretch property to 'UniformToFill' with an optional StretchDirection.
+    /// </summary>
+    /// <param name="image">Image to extend.</param>
+    /// <param name="direction">OPTIONAL; Stretch direction to use (default=Both).</param>
+    /// <returns>The extended element.</returns>
+    public static Image UniformToFill(this Image image, StretchDirection direction = StretchDirection.Both) { image.Stretch = Stretch.UniformToFill; image.StretchDirection = direction; return image; }
+
+    /// <summary>
+    /// Sets the Stretch property to 'Fill' with an optional StretchDirection.
+    /// </summary>
+    /// <param name="image">Image to extend.</param>
+    /// <param name="direction">OPTIONAL; Stretch direction to use (default=Both).</param>
+    /// <returns>The extended element.</returns>
+    public static Image Fill(this Image image, StretchDirection direction = StretchDirection.Both) { image.Stretch = Stretch.Fill; image.StretchDirection = direction; return image; }
+
+    /// <summary>
+    /// Sets the Stretch property to 'None'.
+    /// </summary>
+    /// <param name="image">Image to extend.</param>
+    /// <returns>The extended element.</returns>
+    public static Image NoStretch(this Image image) { image.Stretch = Stretch.None; return image; }
+
 }
