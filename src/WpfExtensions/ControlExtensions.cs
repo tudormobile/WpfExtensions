@@ -83,4 +83,27 @@ public static class ControlExtensions
         control.VerticalContentAlignment = vertical;
         return control;
     }
+
+    /// <summary>
+    /// Set the content template to dynamically generate a template.
+    /// </summary>
+    /// <typeparam name="T">Type of ContentControl to extend.</typeparam>
+    /// <param name="control">Control to extend.</param>
+    /// <param name="templateBuilder">A function to build a template as a UIElement.</param>
+    /// <returns>The extended ContentControl.</returns>
+    public static T ControlTemplate<T>(this T control, Func<UIElement> templateBuilder) where T : Control
+    {
+        control.Template = Helpers.TemplateGenerator.CreateControlTemplate(control.GetType(), templateBuilder);
+        return control;
+    }
+
+    /// <summary>
+    /// Set the control template property.
+    /// </summary>
+    /// <typeparam name="T">Type of Control to extend.</typeparam>
+    /// <param name="control">Control to extend.</param>
+    /// <param name="template">ControlTemplate to use.</param>
+    /// <returns>The extended control.</returns>
+    public static T ControlTemplate<T>(this T control, ControlTemplate template) where T : Control { control.Template = template; return control; }
+
 }
