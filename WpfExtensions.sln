@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfViewsAndModels", "sample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExtensionsGallery", "samples\WpfExtensionsGallery\WpfExtensionsGallery.csproj", "{434508BB-7976-483B-9F7C-CB4FA914176F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfFlowDocument", "samples\WpfFlowDocument\WpfFlowDocument.csproj", "{B621B0DE-7ACB-4D5E-848B-E965CCBA5C9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{434508BB-7976-483B-9F7C-CB4FA914176F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{434508BB-7976-483B-9F7C-CB4FA914176F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{434508BB-7976-483B-9F7C-CB4FA914176F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B621B0DE-7ACB-4D5E-848B-E965CCBA5C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B621B0DE-7ACB-4D5E-848B-E965CCBA5C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B621B0DE-7ACB-4D5E-848B-E965CCBA5C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B621B0DE-7ACB-4D5E-848B-E965CCBA5C9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,5 +55,6 @@ Global
 		{5823879A-D8DE-4EA4-BF44-E7EB0E05D639} = {3CC6F494-9EA4-46BB-B823-CD8A130E1B49}
 		{7213C386-D1E9-44A8-88E8-297E6E53ED7C} = {3CC6F494-9EA4-46BB-B823-CD8A130E1B49}
 		{434508BB-7976-483B-9F7C-CB4FA914176F} = {3CC6F494-9EA4-46BB-B823-CD8A130E1B49}
+		{B621B0DE-7ACB-4D5E-848B-E965CCBA5C9C} = {3CC6F494-9EA4-46BB-B823-CD8A130E1B49}
 	EndGlobalSection
 EndGlobal
