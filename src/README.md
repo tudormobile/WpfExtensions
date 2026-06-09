@@ -1,7 +1,7 @@
 # WpfExtensions
 WPF Extension Methods  
 
-Copyright&copy;Tudormobile LLC  
+Copyright&copy;Bill Tudor  
 [Source Code](https://github.com/tudormobile/WpfExtensions) | [Documentation](https://tudormobile.github.io/WpfExtensions/) | [API documentation](https://tudormobile.github.io/WpfExtensions/api/Tudormobile.html)
 ## Getting Started
 ### Install the package

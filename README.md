@@ -3,7 +3,7 @@ WPF Extension Methods
 
 [![Build and Deploy](https://github.com/tudormobile/WpfExtensions/actions/workflows/dotnet.yml/badge.svg)](https://github.com/tudormobile/WpfExtensions/actions/workflows/dotnet.yml)  [![Publish Docs](https://github.com/tudormobile/WpfExtensions/actions/workflows/docs.yml/badge.svg)](https://github.com/tudormobile/WpfExtensions/actions/workflows/docs.yml)  [![Create Package Release](https://github.com/tudormobile/WpfExtensions/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/tudormobile/WpfExtensions/actions/workflows/dotnet.yml)
 
-Copyright&copy;Tudormobile LLC
+Copyright&copy;Bill Tudor
 ### Quick Start
 
 ```
