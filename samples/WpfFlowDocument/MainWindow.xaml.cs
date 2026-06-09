@@ -66,8 +66,7 @@ namespace WpfFlowDocument
                                       .AddCells(["First Name", "Last Name", "Phone Number", "Birth Date"]));
 
             var row1 = new TableRow().AddCells(["Joe", "Smith", "(123) 555-1212", "1/1/1960"]);
-            var row2 = new TableRow().AddCells(["Jane", "Doe", "(800) 888-1212", "2/3/1960"]); ;
-
+            var row2 = new TableRow().AddCells(["Jane", "Doe", "(800) 888-1212", "2/3/1960"]);
             result.AddRows([row1, row2]);
             return result;
         }
