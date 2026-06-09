@@ -26,7 +26,7 @@ namespace WpfFlowDocument
                     createList("One", "Two", "Three").SquareMarker(),
                     new List().Items(["Four", "Five", "Six"]),
                     new Paragraph().Add("Go to jail, go directly to jail. Do not pass go, and do not collect $200.")
-                        .Padding(veritcalPadding: 0.5.Inches())
+                        .Padding(verticalPadding: 0.5.Inches())
                         .Padding(horizontalPadding: 0.25.Inches())
                         .Border(Brushes.Red).Center(),
                     new Paragraph().AddRange([
