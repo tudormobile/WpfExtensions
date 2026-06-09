@@ -141,7 +141,7 @@ public static class FlowDocumentExtensions
     /// <returns>The extended FlowDocument element.</returns>
     public static FlowDocument ColumnWidth(this FlowDocument document, double columnWidth) { document.ColumnWidth = columnWidth; return document; }
 
-    private static Double toDouble(string qualifiedDouble)
-        => (double)_converter.ConvertFrom(qualifiedDouble)!;
+    private static double toDouble(string qualifiedDouble)
+        => (double)(_converter.ConvertFromString(qualifiedDouble) ?? throw new FormatException($"Invalid length '{qualifiedDouble}'."));
 
 }
