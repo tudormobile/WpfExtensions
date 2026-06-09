@@ -26,7 +26,7 @@ namespace WpfFlowDocument
                     createList("One", "Two", "Three").SquareMarker(),
                     new List().Items(["Four", "Five", "Six"]),
                     new Paragraph().Add("Go to jail, go directly to jail. Do not pass go, and do not collect $200.")
-                        .Padding(veritcalPadding: 0.5.Inches())
+                        .Padding(verticalPadding: 0.5.Inches())
                         .Padding(horizontalPadding: 0.25.Inches())
                         .Border(Brushes.Red).Center(),
                     new Paragraph().AddRange([
@@ -66,8 +66,7 @@ namespace WpfFlowDocument
                                       .AddCells(["First Name", "Last Name", "Phone Number", "Birth Date"]));
 
             var row1 = new TableRow().AddCells(["Joe", "Smith", "(123) 555-1212", "1/1/1960"]);
-            var row2 = new TableRow().AddCells(["Jane", "Doe", "(800) 888-1212", "2/3/1960"]); ;
-
+            var row2 = new TableRow().AddCells(["Jane", "Doe", "(800) 888-1212", "2/3/1960"]);
             result.AddRows([row1, row2]);
             return result;
         }

@@ -8,8 +8,7 @@ namespace Tudormobile.WpfExtensions.Documents;
 /// </summary>
 public static class FlowDocumentExtensions
 {
-    private static LengthConverter _converter = new LengthConverter();
-
+    private static readonly LengthConverter _converter = new LengthConverter();
     /// <summary>
     /// Sets the PageHeight property of a FlowDocument element.
     /// </summary>
@@ -142,7 +141,7 @@ public static class FlowDocumentExtensions
     /// <returns>The extended FlowDocument element.</returns>
     public static FlowDocument ColumnWidth(this FlowDocument document, double columnWidth) { document.ColumnWidth = columnWidth; return document; }
 
-    private static Double toDouble(string qualifiedDouble)
-        => (double)_converter.ConvertFrom(qualifiedDouble)!;
+    private static double toDouble(string qualifiedDouble)
+        => (double)(_converter.ConvertFromString(qualifiedDouble) ?? throw new FormatException($"Invalid length '{qualifiedDouble}'."));
 
 }

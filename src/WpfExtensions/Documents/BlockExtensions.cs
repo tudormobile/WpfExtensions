@@ -33,20 +33,20 @@ public static class BlockExtensions
     /// <typeparam name="T">Type of Block element.</typeparam>
     /// <param name="block">The Block element to extend.</param>
     /// <param name="horizontalPadding">Padding value to use for Left/Right sides.</param>
-    /// <param name="veritcalPadding">Padding value to use for Top/Bottom sides.</param>
+    /// <param name="verticalPadding">Padding value to use for Top/Bottom sides.</param>
     /// <returns>The extended Block element.</returns>
-    public static T Padding<T>(this T block, double? horizontalPadding = null, double? veritcalPadding = null) where T : Block
+    public static T Padding<T>(this T block, double? horizontalPadding = null, double? verticalPadding = null) where T : Block
     {
         var padding = block.Padding;
         if (horizontalPadding != null)
         {
-            padding.Left = (double)horizontalPadding;
-            padding.Right = (double)horizontalPadding;
+            padding.Left = horizontalPadding.Value;
+            padding.Right = horizontalPadding.Value;
         }
-        if (veritcalPadding != null)
+        if (verticalPadding != null)
         {
-            padding.Top = (double)veritcalPadding;
-            padding.Bottom = (double)veritcalPadding;
+            padding.Top = verticalPadding.Value;
+            padding.Bottom = verticalPadding.Value;
         }
         return block.Padding(padding);
     }
@@ -95,22 +95,22 @@ public static class BlockExtensions
     /// <typeparam name="T">Type of Block element.</typeparam>
     /// <param name="block">The Block element to extend.</param>
     /// <param name="horizontalMargin">Optional margin value to use for Left/Right sides.</param>
-    /// <param name="veritcalMargin">Optional margin value to use for Top/Bottom sides.</param>
+    /// <param name="verticalMargin">Optional margin value to use for Top/Bottom sides.</param>
     /// <returns>The extended Block element.</returns>
-    public static T Margin<T>(this T block, double? horizontalMargin = null, double? veritcalMargin = null) where T : Block
+    public static T Margin<T>(this T block, double? horizontalMargin = null, double? verticalMargin = null) where T : Block
     {
-        var padding = block.Margin;
+        var margin = block.Margin;
         if (horizontalMargin != null)
         {
-            padding.Left = (double)horizontalMargin;
-            padding.Right = (double)horizontalMargin;
+            margin.Left = horizontalMargin.Value;
+            margin.Right = horizontalMargin.Value;
         }
-        if (veritcalMargin != null)
+        if (verticalMargin != null)
         {
-            padding.Top = (double)veritcalMargin;
-            padding.Bottom = (double)veritcalMargin;
+            margin.Top = verticalMargin.Value;
+            margin.Bottom = verticalMargin.Value;
         }
-        return block.Margin(padding);
+        return block.Margin(margin);
     }
 
     /// <summary>
