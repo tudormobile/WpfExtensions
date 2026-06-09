@@ -12,7 +12,7 @@ namespace WpfExtensions.Tests
             var expected = "string content";
             var target = new TableRow();
             Assert.AreSame(target, target.AddCells([expected]));
-            var actual = ((target.Cells.First().Blocks.FirstBlock as Paragraph).Inlines.FirstInline as Run).Text;
+            var actual = ((target.Cells.First().Blocks.FirstBlock as Paragraph)!.Inlines.FirstInline as Run)!.Text;
             Assert.AreEqual(expected, actual);
         }
 

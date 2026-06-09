@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/WpfApp1/WpfApp1.csproj" />
+    <Project Path="samples/WpfExtensionsGallery/WpfExtensionsGallery.csproj" />
+    <Project Path="samples/WpfFlowDocument/WpfFlowDocument.csproj" />
+    <Project Path="samples/WpfViewsAndModels/WpfViewsAndModels.csproj" />
+  </Folder>
+  <Project Path="src/WpfExtensions.Tests/WpfExtensions.Tests.csproj" />
+  <Project Path="src/WpfExtensions/WpfExtensions.csproj" />
+</Solution>
