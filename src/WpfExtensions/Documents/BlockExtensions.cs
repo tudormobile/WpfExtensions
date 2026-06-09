@@ -33,20 +33,20 @@ public static class BlockExtensions
     /// <typeparam name="T">Type of Block element.</typeparam>
     /// <param name="block">The Block element to extend.</param>
     /// <param name="horizontalPadding">Padding value to use for Left/Right sides.</param>
-    /// <param name="veritcalPadding">Padding value to use for Top/Bottom sides.</param>
+    /// <param name="verticalPadding">Padding value to use for Top/Bottom sides.</param>
     /// <returns>The extended Block element.</returns>
-    public static T Padding<T>(this T block, double? horizontalPadding = null, double? veritcalPadding = null) where T : Block
+    public static T Padding<T>(this T block, double? horizontalPadding = null, double? verticalPadding = null) where T : Block
     {
         var padding = block.Padding;
         if (horizontalPadding != null)
         {
-            padding.Left = (double)horizontalPadding;
-            padding.Right = (double)horizontalPadding;
+            padding.Left = horizontalPadding.Value;
+            padding.Right = horizontalPadding.Value;
         }
-        if (veritcalPadding != null)
+        if (verticalPadding != null)
         {
-            padding.Top = (double)veritcalPadding;
-            padding.Bottom = (double)veritcalPadding;
+            padding.Top = verticalPadding.Value;
+            padding.Bottom = verticalPadding.Value;
         }
         return block.Padding(padding);
     }
