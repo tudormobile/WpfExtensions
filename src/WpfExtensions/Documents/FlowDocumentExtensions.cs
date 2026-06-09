@@ -8,8 +8,7 @@ namespace Tudormobile.WpfExtensions.Documents;
 /// </summary>
 public static class FlowDocumentExtensions
 {
-    private static LengthConverter _converter = new LengthConverter();
-
+    private static readonly LengthConverter _converter = new LengthConverter();
     /// <summary>
     /// Sets the PageHeight property of a FlowDocument element.
     /// </summary>
